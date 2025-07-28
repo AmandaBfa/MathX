@@ -73,18 +73,18 @@ class MainController extends Controller
                     break;
                 case 'division':
                     // avoid division by zero
-                    // if ($number2 == 0) {
-                    //     $number2 = 1;
-                    // }
+                    if ($number2 == 0) {
+                        $number2 = 1;
+                    }
                     $exercise = "$number1 : $number2 =";
                     $sollution = $number1 / $number2;
                     break;
             }
 
             // if $sollution is a float number, round it to 2 decimal places
-            // if (is_float($sollution)) {
-            //     $sollution = round($sollution, 2);
-            // }
+            if (is_float($sollution)) {
+                $sollution = round($sollution, 2);
+            }
 
             $exercises[] = [
                 // 'operation' => $operation,
